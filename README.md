@@ -42,20 +42,16 @@ Clone existing git repository to download the solution and change directory to `
 
 Edit **config/flyway-development.properties** (configuration file for flyway) to update following properties with database configuration
 
-```
 **flyway.user** - Database username  
 **flyway.password** - Database user password  
 **flyway.schemas** - Database schema name  
 **flyway.url** - MySQL JDBC URL  
-```
 
 Edit **config/application-development.yml** (configuration file for dropwizard) to update following properties with database configuration
 
-```
 **database.user** - Database username  
 **database.password** - Database user password  
 **database.url** - MySQL JDBC URL with database schema name  
-```
 
 Run following maven command to create database and schemas
 
