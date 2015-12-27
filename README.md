@@ -35,43 +35,47 @@ Instructions
 --------------
 Please follow these instructions for building and running the application.
 
-1. Clone existing git repository to download the solution and change directory to `expense-manager`
+Clone existing git repository to download the solution and change directory to `expense-manager`
 
 `git clone https://github.com/sanketmeghani/expense-manager.git`
 `cd expense-manager`
 
-2. Edit **config/flyway-development.properties** (configuration file for flyway) to update following properties with database configuration
+Edit **config/flyway-development.properties** (configuration file for flyway) to update following properties with database configuration
 
-**flyway.user** - Database username
-**flyway.password** - Database user password
-**flyway.schemas** - Database schema name
-**flyway.url** - MySQL JDBC URL
+```
+**flyway.user** - Database username  
+**flyway.password** - Database user password  
+**flyway.schemas** - Database schema name  
+**flyway.url** - MySQL JDBC URL  
+```
 
-3. Edit **config/application-development.yml** (configuration file for dropwizard) to update following properties with database configuration
+Edit **config/application-development.yml** (configuration file for dropwizard) to update following properties with database configuration
 
-**database.user** - Database username
-**database.password** - Database user password
-**database.url** - MySQL JDBC URL with database schema name
+```
+**database.user** - Database username  
+**database.password** - Database user password  
+**database.url** - MySQL JDBC URL with database schema name  
+```
 
-4. Run following maven command to create database and schemas
+Run following maven command to create database and schemas
 
 `mvn compile flyway:migrate -Dflyway.configFile=config/flyway-development.properties`
 
-7. Execute following maven command to run test cases
+Execute following maven command to run test cases
 
 `mvn clean test`
 
-8. Executed following maven command to build and package application as a fat executable jar
+Executed following maven command to build and package application as a fat executable jar
 
 `mvn clean package`
 
-9. Execute following command to deploy application on localhost
+Execute following command to deploy application on localhost
 
 `java -jar target/expense-manager-1.0.jar server config/application-development.yml`
 
-10. Server logs are available in **logs/application.log** and request logs are available in **logs/access.log**
+Server logs are available in **log/application.log** and request logs are available in **log/access.log**  
 
-11. Application could be accessed by visting [http://localhost:8080]
+Application could be accessed by visting [http://localhost:8080](http://localhost:8080)
 
 
 Note
@@ -80,6 +84,6 @@ I have updated **src/main/resources/assets/src/js/apps/codingtest/expenses/expen
 
 Follow these steps to rebuild client bundle.
 
-`cd src/main/resources/assets`
-`gulp build-dev` (You may need to insrall gulp, npm if it is not already installed. Execute `npm install gulp -g` and `npm install --dev` to install node modules dependencies before executing this command)
-`npm install --dev` (You can skip this step if required node module dependencies are already installed)
+`cd src/main/resources/assets`  
+`gulp build-dev` (You may need to insrall gulp, npm if it is not already installed. Execute `npm install gulp -g` and `npm install --dev` to install node modules dependencies before executing this command)  
+`npm install --dev`  
