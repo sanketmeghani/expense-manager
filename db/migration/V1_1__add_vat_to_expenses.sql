@@ -1,0 +1,1 @@
+ALTER TABLE expense ADD COLUMN `vat` decimal(10,2) AFTER `amount`;

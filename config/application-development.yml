@@ -1,0 +1,55 @@
+
+database:
+  driverClass: 'com.mysql.jdbc.Driver'
+  user: 'root'
+  password: 'root'
+  url: 'jdbc:mysql://localhost:3306/app-db'
+
+  properties:
+    hibernate.dialect: 'org.hibernate.dialect.MySQLDialect'
+    hibernate.connection.characterEncoding: 'UTF-8'
+    hibernate.connection.useUnicode: true
+
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 10s
+
+  validationQuery: "SELECT 1"
+
+  # the minimum number of connections to keep open
+  minSize: 8
+
+  # the maximum number of connections to keep open
+  maxSize: 32
+
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: false
+  
+server:
+  type: simple
+  applicationContextPath: '/'
+  adminContextPath: '/admin'
+  rootPath: '/api/'
+  connector:
+    type: 'http'
+    port: '8080'
+    
+  requestLog:
+    timeZone: 'UTC'
+    appenders:
+      - type: 'file'
+        currentLogFilename: 'log/access.log'
+        threshold: 'ALL'
+        archive: true
+        archivedLogFilenamePattern: 'log/access.%d.log'
+        archivedFileCount: 5
+            
+logging:
+  level: 'INFO'
+  appenders:
+    - type: 'file'
+      currentLogFilename: 'log/application.log'
+      threshold: 'ALL'
+      archive: false
+      archivedLogFilenamePattern: 'log/application-%d.log'
+      archivedFileCount: 5
+      timeZone: 'UTC'    
