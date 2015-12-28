@@ -81,5 +81,4 @@ I have updated **src/main/resources/assets/src/js/apps/codingtest/expenses/expen
 Follow these steps to rebuild client bundle.
 
 `cd src/main/resources/assets`  
-`gulp build-dev` (You may need to insrall gulp, npm if it is not already installed. Execute `npm install gulp -g` and `npm install --dev` to install node modules dependencies before executing this command)  
-`npm install --dev`  
+`gulp build` (You may need to insrall gulp, npm if it is not already installed. Execute `npm install gulp -g` and `npm install` to install node modules dependencies before executing this command)
