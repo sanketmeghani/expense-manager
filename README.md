@@ -27,9 +27,7 @@ Technologies/Libraries Used
 2. MySQL (5.5.46)
 3. Dropwizard (0.9.1)
 4. Flyway (3.2.1)
-5. NodeJs (4.2.3)
-6. npm (2.14.7)
-7. jsonassert (1.3.0)
+5. jsonassert (1.3.0)
 
 Instructions
 --------------
