@@ -28,6 +28,11 @@ Technologies/Libraries Used
 3. Dropwizard (0.9.1)
 4. Flyway (3.2.1)
 5. jsonassert (1.3.0)
+6. Maven (3.0.5)
+
+Pre-requisites
+--------------
+Java, MySQL and Maven should be installed
 
 Instructions
 --------------
