@@ -40,7 +40,7 @@ Please follow these instructions for building and running the application.
 
 Clone existing git repository to download the solution and change directory to `expense-manager`
 
-`git clone https://github.com/sanketmeghani/expense-manager.git`
+`git clone https://github.com/sanketmeghani/expense-manager.git`    
 `cd expense-manager`
 
 Edit **config/flyway-development.properties** (configuration file for flyway) to update following properties with database configuration
