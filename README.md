@@ -1,4 +1,4 @@
-# Solution to alchemytech backend coding challenge
+# Simple expense manager using AngularJS & Java
 
 Goal
 ====
